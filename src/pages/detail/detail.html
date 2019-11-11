@@ -6,10 +6,22 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>detail</ion-title>
+    <ion-title>{{note.title}}</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item>
+      <ion-label fixed>Title</ion-label>
+      <ion-input type="text" [(ngModel)]="note.title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Date</ion-label>
+      <ion-datetime type="text" displayFormat="DD/MM/YYYY" [(ngModel)]="note.date"></ion-datetime>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Content" [(ngModel)]="note.content"></ion-textarea>
+    </ion-item>
+  </ion-list>
 </ion-content>
