@@ -1,5 +1,5 @@
 export class NoteService{
-  notes = [
+   notes = [
     {
       id: '1',
       date: '2016-02-01',
@@ -19,4 +19,12 @@ export class NoteService{
       content: 'Importante para desenvolver com Ionic'
     }
   ]
+
+
+ removeNote (note){
+    let index = this.notes.indexOf (note);
+    if(index>-1){
+      this.notes.splice(index, 1);
+    }
+  }
 }
