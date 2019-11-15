@@ -8,7 +8,7 @@
   <ion-navbar>
     <ion-title>{{note.title}}</ion-title>
     <ion-buttons end>
-<button ion-button icon-only (click)="onTrash()">
+<button ion-button icon-only (click)="onTrash()" *ngIf="!newNoteFlag">
 <ion-icon name="trash"></ion-icon>
 </button>
 </ion-buttons>

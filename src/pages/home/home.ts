@@ -16,4 +16,7 @@ constructor(public navCtrl: NavController, private noteService: NoteService) {
   noteParam: note
   });
   }
+  onAddClick(){
+    this.navCtrl.push('DetailPage');
+  }
 } 
